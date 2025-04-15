@@ -1,0 +1,26 @@
+{
+  "name": "mountz/hypervel-vite",
+  "description": "php package for integrating Hypervel and vite",
+  "type": "library",
+  "require": {
+    "hypervel/support": "^0.1.5"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Mountz\\HypervelVite\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Ardi Saputra"
+    }
+  ],
+  "extra": {
+    "hypervel": {
+      "providers": [
+        "Mountz\\HypervelVite\\ViteServiceProvider"
+      ]
+    }
+  }
+}
