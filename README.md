@@ -45,12 +45,6 @@ json{
     "build": "vite build",
     "dev": "vite"
   },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.1.3",
-    "laravel-vite-plugin": "^1.2.0",
-    "tailwindcss": "^4.1.3",
-    "vite": "^6.2.6"
-  }
 }
 ```
 5. Update 'resources/css/app.css'
