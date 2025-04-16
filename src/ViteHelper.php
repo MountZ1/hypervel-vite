@@ -35,7 +35,6 @@ class ViteHelper
         $manifest = json_decode(file_get_contents($manifestPath), true);
         $tags = '';
         foreach (self::$modules as $module) {
-            dd(self::$modules);
             if (! isset($manifest[$module])) {
                 continue;
             }
@@ -49,25 +48,13 @@ class ViteHelper
         return $tags;
     }
 
-    private static function getViteConfig()
+    private static function combineModule(): void
     {
-        $path = base_path('vite.config.js');
-        if (! file_exists($path)) {
-            throw new Error("vite.config.js not found");
-        }
-        $result = [];
-        $content = file_get_contents($path);
-        if (preg_match('/input:\s*\[(.*?)\]/s', $content, $matches)) {
-            $entriesStr = $matches[1];
-            preg_match_all('/[\'"]([^\'"]+)[\'"]/', $entriesStr, $entriesMatches);
-            $result['input'] = $entriesMatches[1] ?? [];
-        }
+        $defaultModules = [
+            'resources/css/app.css',
+            'resources/js/app.js',
+        ];
 
-        return $result;
-    }
-
-    private static function combineModule()
-    {
-        self::$modules = array_merge(self::$modules, self::getViteConfig()['input'] ?? []);
+        self::$modules = array_unique(array_merge($defaultModules, self::$modules));
     }
 }
