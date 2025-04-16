@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-
 # Hypervel-Vite
 
 # **This package only been tested with tailwind and plain js.**
@@ -111,8 +109,5 @@ Build for production:
 `npm run build`
 License
 The MIT License (MIT). Please see License File for more information
-=======
 
-This package had been tested just for tailwind.[^1]
 
-> > > > > > > Stashed changes
