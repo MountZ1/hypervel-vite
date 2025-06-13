@@ -22,6 +22,8 @@
         "Mountz\\HypervelVite\\ViteServiceProvider"
       ]
     },
-    "branch-alias": "0.2.x-dev"
+       "branch-alias": {Add commentMore actions
+      "dev-main": "0.2.x-dev"
+    }
   }
 }
